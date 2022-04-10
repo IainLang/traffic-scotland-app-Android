@@ -1,4 +1,5 @@
 package com.example.mpd_coursework_iainlang;
+//Iain Lang - s1822179
 
 import static android.content.ContentValues.TAG;
 import androidx.appcompat.app.AlertDialog;
@@ -167,9 +168,16 @@ public class MainActivity extends AppCompatActivity {
         connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED){
 
             Log.d("myApp", "Network Available");
-            connected = true;
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(this, "Wifi Connection lost", duration);
+            toast.show();            connected = true;
         }else{
             Log.d("myApp", "Network not Available");
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(this, "Wifi Connection lost", duration);
+            toast.show();
             connected = false;
         }
 
